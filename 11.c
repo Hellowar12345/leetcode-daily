@@ -9,7 +9,7 @@ int maxArea(int* height, int heightSize) {
     int max=(right-left)*high;
     if(high==height[left])left++;
     else right--;
-    while(left!=right){
+    while(left<right){
         high=min(height[left],height[right]);
         int tmp=(right-left)*high;
         if(tmp>max)max=tmp;
